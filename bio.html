@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="project.css">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bio</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("form").submit(function(event){
+          event.preventDefault();
+          var name = $("#name").val();
+          var fatherName = $("#father-name").val();
+          var dob = $("#dob").val();
+          var address = $("#address").val();
+          var bayFormNumber = $("#bay-form-number").val();
+          if(name == "" || fatherName == "" || dob == "" || address == "" || bayFormNumber == "") {
+            alert("Please fill in all the required fields");
+          } else {
+            alert("Form submitted successfully!");
+          }
+        });
+      });
+      </script>
+</head>
+<body>
+    <h1 style="text-align: center;">Enter Your Bio And Image</h1>
+    <form>
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image">
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="father-name">Father Name:</label>
+        <input type="text" id="father-name" name="father-name">
+        <br>
+        <label for="dob">Date of birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <br>
+        <label for="bay-form-number">Bay Form Number:</label>
+        <input type="text" id="bay-form-number" name="bay-form-number">
+        <br><br>
+        <input type="submit" value="Submit" class="button">
+        <input type="button" value="Next" onclick="window.location.href='payment.html'" class="button">
+      </form> 
+      </body>
+      </html>
